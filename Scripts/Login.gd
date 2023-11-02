@@ -33,15 +33,6 @@ func selectFromDB():
 	#	print(d)
 	#database.close()
 
-func checkDataInDB():
-	print("running select query")
-	
-	var data = database.execute("""
-	BEGIN;
-	
-	""")
-	pass
-
 
 func _process(delta):
 	database.poll()
@@ -52,7 +43,6 @@ func closedConnection():
 func _exit_tree():
 	database.close()
 	
-
 
 
 func _on_Button_button_down():
